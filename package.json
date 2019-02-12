@@ -16,7 +16,7 @@
   },
   "scripts": {
     "dev": "nodemon --inspect-brk app.js",
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "start:ter": "node app-terminal.js"
   },
   "keywords": [],
