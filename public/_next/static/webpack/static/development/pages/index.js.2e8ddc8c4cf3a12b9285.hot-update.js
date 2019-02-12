@@ -9,7 +9,7 @@ webpackHotUpdate("static\\development\\pages\\index.js",{
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "googleMapInit", function() { return googleMapInit; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "googleMapInit", function() { return googleMapInit; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "appReq", function() { return appReq; });
 /* harmony import */ var _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
 /* harmony import */ var _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_0__);
@@ -39,11 +39,11 @@ var googleMapInit = function googleMapInit() {
   });
 };
 var appReq = axios__WEBPACK_IMPORTED_MODULE_1___default.a.create({
-  baseURL: process.env.baseURL || 'http://localhost:3001/api'
+  baseURL:  false ? undefined : 'http://localhost:3001/api'
 });
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
+console.log("https://weather-mapp.herokuapp.com/api");
 
 /***/ })
 
 })
-//# sourceMappingURL=index.js.3c7543d22051afe047e5.hot-update.js.map
+//# sourceMappingURL=index.js.2e8ddc8c4cf3a12b9285.hot-update.js.map
