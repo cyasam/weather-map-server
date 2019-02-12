@@ -12,7 +12,6 @@ const getAddress = address =>
         json: true,
       },
       function(error, response, body) {
-        debugger;
         if (error) {
           reject('Unable to connect Map Server');
         } else if (!error && body) {

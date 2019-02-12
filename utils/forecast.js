@@ -1,11 +1,9 @@
 const request = require('request');
 
-const getWeather = latLng =>
+const getWeather = ({ lat, lon }) =>
   new Promise((resolve, reject) => {
-    const { lat, lng } = latLng;
-    const latLngUrl = `${lat},${lng}`;
     const key = process.env.WEATHER_KEY;
-    const weatherUrl = `https://api.darksky.net/forecast/${key}/${latLngUrl}?units=si`;
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`;
 
     request(
       {

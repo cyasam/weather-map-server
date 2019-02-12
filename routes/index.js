@@ -5,22 +5,23 @@ const forecast = require('../utils/forecast');
 const router = express.Router();
 
 router.get('/get-weather', (req, res) => {
-  const { latlng } = req.query;
+  const { lat, lon } = req.query;
+  const errorMessage = 'Please enter valid latitude and longitude values.';
 
-  const [lat, lng] = latlng.split(',');
-
-  if (Number(lat) && Number(lng)) {
-    forecast
-      .getWeather({ lat, lng })
-      .then(response => {
-        res.json(response);
-      })
-      .catch(error => {
-        res.json({ error: error.message });
-      });
-  } else {
-    res.json({ error: 'Please enter valid latitude and longitude values.' });
+  if (!Number(lat) || !Number(lon)) {
+    return res.json({
+      error: errorMessage,
+    });
   }
+
+  forecast
+    .getWeather({ lat, lon })
+    .then(response => {
+      res.json(response);
+    })
+    .catch(error => {
+      res.json({ error: error.message });
+    });
 });
 
 module.exports = router;
