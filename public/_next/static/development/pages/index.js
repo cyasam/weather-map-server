@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "googleMapInit", function() { return googleMapInit; });
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "googleMapInit", function() { return googleMapInit; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "appReq", function() { return appReq; });
 /* harmony import */ var _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
 /* harmony import */ var _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_0__);
@@ -39,8 +39,9 @@ var googleMapInit = function googleMapInit() {
   });
 };
 var appReq = axios__WEBPACK_IMPORTED_MODULE_1___default.a.create({
-  baseURL: 'http://192.168.1.13:3001/api'
+  baseURL: process.env.baseURL || 'http://localhost:3001/api'
 });
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
