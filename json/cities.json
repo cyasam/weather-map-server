@@ -38,5 +38,6 @@
     { "name": "Hamburg", "lat": 53.57532, "lon": 10.01534 },
     { "name": "Barcelona", "lat": 41.38879, "lon": 2.15899 },
     { "name": "Porto", "lat": 41.14961, "lon": -8.61099 }
-  ]
+  ],
+  "level3": [{ "name": "Ruse", "lat": 43.85639, "lon": 25.97083 }]
 }

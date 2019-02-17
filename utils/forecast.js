@@ -1,5 +1,11 @@
 const request = require('request');
 
+const getAllWeather = cities => {
+  const promiseMap = cities.map(city => getWeather(city));
+
+  return Promise.all(promiseMap);
+};
+
 const getWeather = ({ lat, lon }) =>
   new Promise((resolve, reject) => {
     const key = process.env.WEATHER_KEY;
@@ -22,4 +28,5 @@ const getWeather = ({ lat, lon }) =>
 
 module.exports = {
   getWeather,
+  getAllWeather,
 };
