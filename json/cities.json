@@ -1,10 +1,10 @@
 {
   "level1": [
     { "name": "Istanbul", "lat": 41.01384, "lon": 28.94966 },
-    { "name": "London", "lat": 53.33306, "lon": -6.24889 },
+    { "name": "Dublin", "lat": 53.33306, "lon": -6.24889 },
     { "name": "Brussels", "lat": 50.85045, "lon": 4.34878 },
     { "name": "Berlin", "lat": 52.52437, "lon": 13.41053 },
-    { "name": "Dublin", "lat": 51.50853, "lon": -0.12574 },
+    { "name": "London", "lat": 51.50853, "lon": -0.12574 },
     { "name": "Edinburg", "lat": 55.95206, "lon": -3.19648 },
     { "name": "Paris", "lat": 48.85341, "lon": 2.3488 },
     { "name": "Milano", "lat": 45.46427, "lon": 9.18951 },

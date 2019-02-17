@@ -6,7 +6,7 @@ const getAllWeather = cities => {
   return Promise.all(promiseMap);
 };
 
-const getWeather = ({ lat, lon }) =>
+const getWeather = ({ lat, lon, name }) =>
   new Promise((resolve, reject) => {
     const key = process.env.WEATHER_KEY;
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`;
@@ -20,6 +20,9 @@ const getWeather = ({ lat, lon }) =>
         if (error) {
           reject('Unable to connect Weather Server');
         } else if (!error && response.statusCode === 200) {
+          body.name = name;
+          body.coord.lon = lon;
+          body.coord.lat = lat;
           resolve(body);
         }
       },
